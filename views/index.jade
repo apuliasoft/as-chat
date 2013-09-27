@@ -1,0 +1,35 @@
+extends layout
+
+block body
+  div(ng-controller='ChatCtrl')
+    .fixed-top
+      .page-header
+        h1 ApuliaSoft Chat
+          small(ng-hide='editName')  Welcome {{ name }}
+        span(ng-hide='editName')
+          | [
+          a(ng-click='editName = true') edit
+          |]
+        form(ng-submit='changeName()', ng-show='editName')
+          .input-group
+            input(ng-model='newName', placeholder='Enter new name', class='form-control')
+            span(class='input-group-btn')
+              input(type='submit', value='Save', class='btn btn-success')
+              input(type='button', value='Cancel', ng-click='editName = false', class='btn btn-danger', )
+
+    .fixed-right
+      h3 Users
+      p(ng-repeat='user in users') {{user}}
+
+    chatroom(ng-model='messages')
+
+    .fixed-bottom
+      form(ng-submit='sendMessage()')
+        .input-group
+          input(size='60', ng-model='message', class='form-control')
+          span(class='input-group-btn')
+            input(type='submit', value='Send', class='btn btn-primary')
+
+  script(src='js/lib/angular/angular.min.js')
+  script(src='/socket.io/socket.io.js')
+  script(src='js/app.js')
