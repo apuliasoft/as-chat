@@ -8,7 +8,7 @@ block body
           small(ng-hide='editName')  Welcome {{ name }}
         span(ng-hide='editName')
           | [
-          a(ng-click='editName = true') edit
+          a(href='', ng-click='editName = true') edit
           |]
         form(ng-submit='changeName()', ng-show='editName')
           .input-group
@@ -30,6 +30,6 @@ block body
           span(class='input-group-btn')
             input(type='submit', value='Send', class='btn btn-primary')
 
-  script(src='js/lib/angular/angular.min.js')
+  script(src='lib/angular/angular.min.js')
   script(src='/socket.io/socket.io.js')
   script(src='js/app.js')

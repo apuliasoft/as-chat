@@ -11,10 +11,10 @@ var app = module.exports = express.createServer();
 
 // Hook Socket.io into Express
 var io = require('socket.io').listen(app);
-io.configure(function () {
-    io.set("transports", ["xhr-polling"]);
-    io.set("polling duration", 10);
-});
+//io.configure(function () {
+//    io.set("transports", ["xhr-polling"]);
+//    io.set("polling duration", 10);
+//});
 
 // Configuration
 

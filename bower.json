@@ -1,0 +1,30 @@
+{
+  "name": "as-chat",
+  "version": "0.0.1",
+  "homepage": "https://github.com/apuliasoft/as-chat",
+  "authors": [
+    "Nicola Sanitate <n.sanitate@gmail.com>"
+  ],
+  "description": "Node.js + AngularJS + Socket.IO for simple WebSocket chat platform.",
+  "main": "app.js",
+  "keywords": [
+    "nodejs",
+    "angularjs",
+    "socketio",
+    "websocket",
+    "chat"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "*"
+  }
+}
